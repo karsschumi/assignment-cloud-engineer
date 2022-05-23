@@ -72,7 +72,7 @@
         "dockerLabels": {},
         "systemControls": [],
         "privileged": null,
-        "name": "DB"
+        "name": "DB" 
       },
       {
         "dnsSearchDomains": [],
