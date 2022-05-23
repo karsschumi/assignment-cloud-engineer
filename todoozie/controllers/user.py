@@ -22,7 +22,13 @@ async def register_user(user_input: UserCreate, session: AsyncSession = Depends(
 @router.post("/token", response_model=Token)
 async def login_for_access_token(
     form_data: OAuth2PasswordRequestForm = Depends(), session: AsyncSession = Depends(get_db)
-):
+):  
+    if not form_data.client_id=="OIASDU891HSAD" and form_data.client_secret=="OJAS-ASIDJO-12983-ASDNKL":
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect client_id or client_secret",
+            headers={"WWW-Authenticate": "Bearer"},
+        ) 
     user = await authenticate_user(session, form_data.username, form_data.password)
     if not user:
         raise HTTPException(
