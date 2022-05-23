@@ -12,7 +12,7 @@ services:
     environment:
       SECRET_KEY: 77b070105b32e1b78c3b16374702a634ca1349e966e2c9e4cede09154a0e048f
       DB_PASSWORD: admin
-      DB_HOST: db
+      DB_HOST: localhost
     depends_on:
       - db
     ports:
