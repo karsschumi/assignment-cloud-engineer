@@ -1,230 +1,230 @@
 {
-    "ipcMode": null,
-    "executionRoleArn": "arn:aws:iam::904204322916:role/TodoozieECSFargateLoadBal-Todoozieecsexecutionrole-VG1P5TFJZQK",
-    "containerDefinitions": [
-      {
-        "dnsSearchDomains": [],
-        "environmentFiles": [],
-        "logConfiguration": {
-          "logDriver": "awslogs",
-          "secretOptions": [],
-          "options": {
-            "awslogs-group": "Todoozie-group",
-            "awslogs-region": "eu-central-1",
-            "awslogs-stream-prefix": "db-container-logs"
-          }
+  "ipcMode": null,
+  "executionRoleArn": "arn:aws:iam::904204322916:role/TodoozieECSFargateLoadBal-Todoozieecsexecutionrole-ZG46N8FZJIXQ",
+  "containerDefinitions": [
+    {
+      "dnsSearchDomains": [],
+      "environmentFiles": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "secretOptions": [],
+        "options": {
+          "awslogs-group": "Todoozie-group",
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "db-container-logs"
+        }
+      },
+      "entryPoint": [],
+      "portMappings": [
+        {
+          "hostPort": 8000,
+          "protocol": "tcp",
+          "containerPort": 8000
+        }
+      ],
+      "command": [],
+      "linuxParameters": null,
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "DB_PASSWORD",
+          "value": "admin"
         },
-        "entryPoint": [],
-        "portMappings": [
-          {
-            "hostPort": 5432,
-            "protocol": "tcp",
-            "containerPort": 5432
-          }
-        ],
-        "command": [],
-        "linuxParameters": null,
-        "cpu": 0,
-        "environment": [
-          {
-            "name": "POSTGRES_DB",
-            "value": "todoozie_db"
-          },
-          {
-            "name": "POSTGRES_PASSWORD",
-            "value": "admin"
-          }
-        ],
-        "resourceRequirements": null,
-        "ulimits": [],
-        "dnsServers": [],
-        "mountPoints": [],
-        "workingDirectory": null,
-        "secrets": [],
-        "dockerSecurityOptions": [],
-        "memory": null,
-        "memoryReservation": null,
-        "volumesFrom": [],
-        "stopTimeout": null,
-        "image": "postgres:13.6",
-        "startTimeout": null,
-        "firelensConfiguration": null,
-        "dependsOn": null,
-        "disableNetworking": null,
-        "interactive": null,
-        "healthCheck": {
-          "retries": 5,
-          "command": [
-            "CMD-SHELL",
-            "pg_isready"
-          ],
-          "timeout": 5,
-          "interval": 20,
-          "startPeriod": null
+        {
+          "name": "SECRET_KEY",
+          "value": "77b070105b32e1b78c3b16374702a634ca1349e966e2c9e4cede09154a0e048f"
+        }
+      ],
+      "resourceRequirements": null,
+      "ulimits": [],
+      "dnsServers": [],
+      "mountPoints": [],
+      "workingDirectory": null,
+      "secrets": [],
+      "dockerSecurityOptions": [],
+      "memory": null,
+      "memoryReservation": null,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "904204322916.dkr.ecr.eu-central-1.amazonaws.com/todoozierepo:latest",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": [],
+      "hostname": null,
+      "extraHosts": [],
+      "pseudoTerminal": null,
+      "user": null,
+      "readonlyRootFilesystem": null,
+      "dockerLabels": {},
+      "systemControls": [],
+      "privileged": null,
+      "name": "App"
+    },
+    {
+      "dnsSearchDomains": [],
+      "environmentFiles": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "secretOptions": [],
+        "options": {
+          "awslogs-group": "Todoozie-group",
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "db-container-logs"
+        }
+      },
+      "entryPoint": [],
+      "portMappings": [
+        {
+          "hostPort": 5432,
+          "protocol": "tcp",
+          "containerPort": 5432
+        }
+      ],
+      "command": [],
+      "linuxParameters": null,
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "POSTGRES_DB",
+          "value": "todoozie_db"
         },
-        "essential": true,
-        "links": [],
-        "hostname": null,
-        "extraHosts": [],
-        "pseudoTerminal": null,
-        "user": null,
-        "readonlyRootFilesystem": null,
-        "dockerLabels": {},
-        "systemControls": [],
-        "privileged": null,
-        "name": "DB"
-      },
-      {
-        "dnsSearchDomains": [],
-        "environmentFiles": [],
-        "logConfiguration": {
-          "logDriver": "awslogs",
-          "secretOptions": [],
-          "options": {
-            "awslogs-group": "Todoozie-group",
-            "awslogs-region": "eu-central-1",
-            "awslogs-stream-prefix": "app-container-logs"
-          }
-        },
-        "entryPoint": [],
-        "portMappings": [
-          {
-            "hostPort": 8000,
-            "protocol": "tcp",
-            "containerPort": 8000
-          }
+        {
+          "name": "POSTGRES_PASSWORD",
+          "value": "admin"
+        }
+      ],
+      "resourceRequirements": null,
+      "ulimits": [],
+      "dnsServers": [],
+      "mountPoints": [],
+      "workingDirectory": null,
+      "secrets": [],
+      "dockerSecurityOptions": [],
+      "memory": null,
+      "memoryReservation": null,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "postgres:13.6",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": {
+        "retries": 5,
+        "command": [
+          "CMD-SHELL",
+          "pg_isready"
         ],
-        "command": [],
-        "linuxParameters": null,
-        "cpu": 0,
-        "environment": [
-          {
-            "name": "DB_PASSWORD",
-            "value": "admin"
-          },
-          {
-            "name": "SECRET_KEY",
-            "value": "77b070105b32e1b78c3b16374702a634ca1349e966e2c9e4cede09154a0e048f"
-          }
-        ],
-        "resourceRequirements": null,
-        "ulimits": [],
-        "dnsServers": [],
-        "mountPoints": [],
-        "workingDirectory": null,
-        "secrets": [],
-        "dockerSecurityOptions": [],
-        "memory": null,
-        "memoryReservation": null,
-        "volumesFrom": [],
-        "stopTimeout": null,
-        "image": "904204322916.dkr.ecr.eu-central-1.amazonaws.com/todoozierepo:latest",
-        "startTimeout": null,
-        "firelensConfiguration": null,
-        "dependsOn": null,
-        "disableNetworking": null,
-        "interactive": null,
-        "healthCheck": null,
-        "essential": true,
-        "links": [],
-        "hostname": null,
-        "extraHosts": [],
-        "pseudoTerminal": null,
-        "user": null,
-        "readonlyRootFilesystem": null,
-        "dockerLabels": {},
-        "systemControls": [],
-        "privileged": null,
-        "name": "App"
-      }
-    ],
-    "placementConstraints": [],
-    "memory": "512",
-    "taskRoleArn": "arn:aws:iam::904204322916:role/TodoozieECSFargateLoadBal-Todoozieecstaskrole5375A-DEH8PAW23494",
-    "compatibilities": [
-      "EC2",
-      "FARGATE"
-    ],
-    "taskDefinitionArn": "arn:aws:ecs:eu-central-1:904204322916:task-definition/TodoozieECSFargateLoadBalancerTaskDefC8C56CC3:2",
-    "family": "TodoozieECSFargateLoadBalancerTaskDefC8C56CC3",
-    "requiresAttributes": [
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        "timeout": 5,
+        "interval": 20,
+        "startPeriod": null
       },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.24"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "ecs.capability.execution-role-awslogs"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.ecr-auth"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.task-iam-role"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "ecs.capability.container-health-check"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "ecs.capability.execution-role-ecr-pull"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "ecs.capability.task-eni"
-      }
-    ],
-    "pidMode": null,
-    "requiresCompatibilities": [
-      "FARGATE"
-    ],
-    "networkMode": "awsvpc",
-    "runtimePlatform": null,
-    "cpu": "256",
-    "revision": 2,
-    "status": "ACTIVE",
-    "inferenceAccelerators": null,
-    "proxyConfiguration": null,
-    "volumes": []
-  }
+      "essential": true,
+      "links": [],
+      "hostname": null,
+      "extraHosts": [],
+      "pseudoTerminal": null,
+      "user": null,
+      "readonlyRootFilesystem": null,
+      "dockerLabels": {},
+      "systemControls": [],
+      "privileged": null,
+      "name": "DB"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": "512",
+  "taskRoleArn": "arn:aws:iam::904204322916:role/TodoozieECSFargateLoadBal-Todoozieecstaskrole5375A-ZYRC3VAK5R6Q",
+  "compatibilities": [
+    "EC2",
+    "FARGATE"
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:eu-central-1:904204322916:task-definition/TodoozieECSFargateLoadBalancerTaskDefinition6390E973:1",
+  "family": "TodoozieECSFargateLoadBalancerTaskDefinition6390E973",
+  "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.24"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.container-health-check"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.task-eni"
+    }
+  ],
+  "pidMode": null,
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "runtimePlatform": null,
+  "cpu": "256",
+  "revision": 1,
+  "status": "ACTIVE",
+  "inferenceAccelerators": null,
+  "proxyConfiguration": null,
+  "volumes": []
+}
